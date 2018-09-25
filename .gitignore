@@ -1,0 +1,7 @@
+*/xcuserdata/*
+*.xcuserdata
+/AbacatxiApp.xcodeproj/project.xcworkspace/xcuserdata/
+
+.DS_Store
+AbacatxiApp/AbacatxiApp.xcodeproj/project.xcworkspace/xcuserdata
+AbacatxiApp/AbacatxiApp.xcodeproj/xcuserdata/augustoqueiroz.xcuserdatad
