@@ -1,18 +1,18 @@
 //
-//  GameViewController.m
+//  ProvokePhaseViewController.m
 //  AbacatxiApp
 //
 //  Created by Augusto Queiroz on 26/09/18.
 //  Copyright © 2018 Augusto Queiroz. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "ProvokePhaseViewController.h"
 
-@interface GameViewController ()
+@interface ProvokePhaseViewController ()
 
 @end
 
-@implementation GameViewController
+@implementation ProvokePhaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,7 +7,23 @@
 //
 
 #import "Provocation.h"
+#import <stdlib.h> // arc4random_uniform
 
 @implementation Provocation
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.type = (ProvocationType) (arc4random() % (int) ProvocationTypeMax); // Get a random provocation type
+        return self;
+    } else {
+        return nil;
+    }
+}
+
+- (instancetype)initWithSuggestion:(NSString*)suggestion {
+    self = [self init];
+    self.suggestion = suggestion;
+    return self;
+}
 
 @end

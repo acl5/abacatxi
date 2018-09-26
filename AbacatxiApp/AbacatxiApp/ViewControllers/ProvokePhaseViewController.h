@@ -1,16 +1,16 @@
 //
-//  GameViewController.h
+//  ProvokePhaseViewController.h
 //  AbacatxiApp
 //
 //  Created by Augusto Queiroz on 26/09/18.
 //  Copyright © 2018 Augusto Queiroz. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GameViewController : UIViewController
+@interface ProvokePhaseViewController : ViewController
 
 @end
 

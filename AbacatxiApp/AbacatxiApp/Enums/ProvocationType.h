@@ -13,7 +13,8 @@
 #endif /* ProvocationType_h */
 
 typedef enum {
-    exageration,
-    revertion,
-    invertion
+    Exageration = 0,
+    Revertion,
+    Invertion,
+    ProvocationTypeMax
 } ProvocationType;

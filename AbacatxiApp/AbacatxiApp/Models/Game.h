@@ -14,10 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Game : NSObject
 
-@property NSString* problem;
+@property (nonatomic) NSString* problem;
 
-@property (nonatomic, assign) SuggestPhase* suggestPhase;
-@property (nonatomic, assign) ProvokePhase* provokePhase;
+@property (nonatomic, strong) SuggestPhase* suggestPhase;
+@property (nonatomic, strong) ProvokePhase* provokePhase;
+
++ (instancetype)sharedManager;
+
+- (void)setProblem:(NSString*)problem;
 
 @end
 
