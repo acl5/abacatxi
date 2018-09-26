@@ -1,13 +1,13 @@
 //
-//  Team.m
+//  Provocation.m
 //  AbacatxiApp
 //
 //  Created by Augusto Queiroz on 26/09/18.
 //  Copyright © 2018 Augusto Queiroz. All rights reserved.
 //
 
-#import "Team.h"
+#import "Provocation.h"
 
-@implementation Team
+@implementation Provocation
 
 @end
