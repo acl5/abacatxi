@@ -9,6 +9,14 @@
 #import "SuggestPhaseViewController.h"
 
 @interface SuggestPhaseViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *team1TimerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *team2TimerLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *sugestionsCollectionView;
+@property (weak, nonatomic) IBOutlet UIImageView *heartMonitor;
+@property (weak, nonatomic) IBOutlet UILabel *team1CounterLabel;
+@property (weak, nonatomic) IBOutlet UILabel *team2CounterLabel;
+
 
 @end
 
