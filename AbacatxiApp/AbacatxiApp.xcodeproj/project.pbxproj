@@ -14,6 +14,14 @@
 		7AC21563215A5BF2005203E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21562215A5BF2005203E4 /* main.m */; };
 		7AC2156D215A5BF2005203E4 /* AbacatxiAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2156C215A5BF2005203E4 /* AbacatxiAppTests.m */; };
 		7AC21578215A5BF2005203E4 /* AbacatxiAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21577215A5BF2005203E4 /* AbacatxiAppUITests.m */; };
+		7AC21587215BAB3D005203E4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21586215BAB3D005203E4 /* MenuViewController.m */; };
+		7AC2158A215BAB55005203E4 /* ConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21589215BAB55005203E4 /* ConnectionViewController.m */; };
+		7AC2158D215BAB64005203E4 /* ProblemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2158C215BAB64005203E4 /* ProblemViewController.m */; };
+		7AC21590215BAB6E005203E4 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2158F215BAB6E005203E4 /* GameViewController.m */; };
+		7AC21593215BAB79005203E4 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21592215BAB79005203E4 /* SelectionViewController.m */; };
+		7AC21596215BAB82005203E4 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21595215BAB82005203E4 /* ResultViewController.m */; };
+		7AC2159B215BB01C005203E4 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2159A215BB01C005203E4 /* Game.m */; };
+		7AC2159E215BB048005203E4 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2159D215BB048005203E4 /* Team.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,22 @@
 		7AC21573215A5BF2005203E4 /* AbacatxiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbacatxiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC21577215A5BF2005203E4 /* AbacatxiAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbacatxiAppUITests.m; sourceTree = "<group>"; };
 		7AC21579215A5BF2005203E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AC21585215BAB3D005203E4 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		7AC21586215BAB3D005203E4 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		7AC21588215BAB55005203E4 /* ConnectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionViewController.h; sourceTree = "<group>"; };
+		7AC21589215BAB55005203E4 /* ConnectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewController.m; sourceTree = "<group>"; };
+		7AC2158B215BAB64005203E4 /* ProblemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProblemViewController.h; sourceTree = "<group>"; };
+		7AC2158C215BAB64005203E4 /* ProblemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProblemViewController.m; sourceTree = "<group>"; };
+		7AC2158E215BAB6E005203E4 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		7AC2158F215BAB6E005203E4 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		7AC21591215BAB79005203E4 /* SelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
+		7AC21592215BAB79005203E4 /* SelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
+		7AC21594215BAB82005203E4 /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		7AC21595215BAB82005203E4 /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		7AC21599215BB01C005203E4 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		7AC2159A215BB01C005203E4 /* Game.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		7AC2159C215BB048005203E4 /* Team.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		7AC2159D215BB048005203E4 /* Team.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +123,8 @@
 		7AC21555215A5BF1005203E4 /* AbacatxiApp */ = {
 			isa = PBXGroup;
 			children = (
+				7AC21598215BB000005203E4 /* Models */,
+				7AC21597215BAFEF005203E4 /* ViewControllers */,
 				7AC21556215A5BF1005203E4 /* AppDelegate.h */,
 				7AC21557215A5BF1005203E4 /* AppDelegate.m */,
 				7AC21559215A5BF1005203E4 /* ViewController.h */,
@@ -127,6 +153,36 @@
 				7AC21579215A5BF2005203E4 /* Info.plist */,
 			);
 			path = AbacatxiAppUITests;
+			sourceTree = "<group>";
+		};
+		7AC21597215BAFEF005203E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AC21585215BAB3D005203E4 /* MenuViewController.h */,
+				7AC21586215BAB3D005203E4 /* MenuViewController.m */,
+				7AC21588215BAB55005203E4 /* ConnectionViewController.h */,
+				7AC21589215BAB55005203E4 /* ConnectionViewController.m */,
+				7AC2158B215BAB64005203E4 /* ProblemViewController.h */,
+				7AC2158C215BAB64005203E4 /* ProblemViewController.m */,
+				7AC2158E215BAB6E005203E4 /* GameViewController.h */,
+				7AC2158F215BAB6E005203E4 /* GameViewController.m */,
+				7AC21591215BAB79005203E4 /* SelectionViewController.h */,
+				7AC21592215BAB79005203E4 /* SelectionViewController.m */,
+				7AC21594215BAB82005203E4 /* ResultViewController.h */,
+				7AC21595215BAB82005203E4 /* ResultViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7AC21598215BB000005203E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AC21599215BB01C005203E4 /* Game.h */,
+				7AC2159A215BB01C005203E4 /* Game.m */,
+				7AC2159C215BB048005203E4 /* Team.h */,
+				7AC2159D215BB048005203E4 /* Team.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC2159E215BB048005203E4 /* Team.m in Sources */,
+				7AC2158D215BAB64005203E4 /* ProblemViewController.m in Sources */,
+				7AC21593215BAB79005203E4 /* SelectionViewController.m in Sources */,
 				7AC2155B215A5BF1005203E4 /* ViewController.m in Sources */,
+				7AC21590215BAB6E005203E4 /* GameViewController.m in Sources */,
 				7AC21563215A5BF2005203E4 /* main.m in Sources */,
+				7AC2159B215BB01C005203E4 /* Game.m in Sources */,
+				7AC2158A215BAB55005203E4 /* ConnectionViewController.m in Sources */,
 				7AC21558215A5BF1005203E4 /* AppDelegate.m in Sources */,
+				7AC21587215BAB3D005203E4 /* MenuViewController.m in Sources */,
+				7AC21596215BAB82005203E4 /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
