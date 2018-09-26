@@ -1,5 +1,5 @@
 //
-//  Team.h
+//  Provocation.h
 //  AbacatxiApp
 //
 //  Created by Augusto Queiroz on 26/09/18.
@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "../Enums/ProvocationType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Team : NSObject
+@interface Provocation : NSObject
+
+@property NSString *suggestion;
+@property ProvocationType type;
+@property NSString *provocation;
 
 @end
 
