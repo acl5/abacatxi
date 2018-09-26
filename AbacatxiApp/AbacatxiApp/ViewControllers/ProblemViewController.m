@@ -9,6 +9,8 @@
 #import "ProblemViewController.h"
 
 @interface ProblemViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *problemTextField;
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 @end
 

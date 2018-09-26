@@ -9,6 +9,13 @@
 #import "SelectionViewController.h"
 
 @interface SelectionViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *option1Button;
+@property (weak, nonatomic) IBOutlet UIButton *option2Button;
+@property (weak, nonatomic) IBOutlet UIButton *neitherButton;
+@property (weak, nonatomic) IBOutlet UIButton *bothButton;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *team1CounterLabel;
+@property (weak, nonatomic) IBOutlet UILabel *team2CounterLabel;
 
 @end
 
