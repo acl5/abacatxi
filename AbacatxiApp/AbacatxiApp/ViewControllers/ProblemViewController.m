@@ -7,6 +7,7 @@
 //
 
 #import "ProblemViewController.h"
+#import "../Models/Game.h"
 
 @interface ProblemViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *problemTextField;
@@ -19,6 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Continue Button starts hidden until something is written in the problemTextField
+    self.continueButton.hidden = true;
+    [self.continueButton addTarget:self
+                            action:@selector(startGame)
+                  forControlEvents:UIControlEventPrimaryActionTriggered];
+    
+    // Setup the problemTextField
+    self.problemTextField.delegate = self;
 }
 
 /*
@@ -30,5 +40,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    if (![textField.text  isEqual: @""]) {
+        self.continueButton.hidden = false;
+    }
+    return true;
+}
+
+- (void)startGame {
+    Game *game = [Game sharedManager];
+    game.problem = [[NSString alloc] initWithFormat: @"%@", self.problemTextField.text];
+}
 
 @end
