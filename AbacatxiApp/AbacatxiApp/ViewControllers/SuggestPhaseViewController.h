@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SuggestPhaseViewController : ViewController
+@interface SuggestPhaseViewController : ViewController <UICollectionViewDataSource>
 
 @end
 
