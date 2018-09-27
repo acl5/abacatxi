@@ -122,6 +122,8 @@
 
 - (void)getSuggestion:(NSString*) suggestion {
     [self.game.suggestPhase addSuggestion:suggestion];
+    self.team1CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.suggestPhase.team1Suggestions.count];
+    self.team2CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.suggestPhase.team2Suggestions.count];
     if (self.game.suggestPhase.currentTurn % 2 == 0) {
         self.heartMonitor.image = [UIImage imageNamed:@"monitor_team 1"];
     } else {

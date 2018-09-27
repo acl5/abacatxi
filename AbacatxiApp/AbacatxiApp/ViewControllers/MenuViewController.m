@@ -6,9 +6,9 @@
 //  Copyright © 2018 Augusto Queiroz. All rights reserved.
 //
 
-#define appName @"MergeShift"
-
 #import "MenuViewController.h"
+
+#define appName @"Mind.Shift"
 
 @interface MenuViewController ()
 
@@ -21,8 +21,12 @@
     // Do any additional setup after loading the view.
     self.menuLabel.text = appName;
     self.menuLabel.textColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
-    [self.nextScreenButton setTitle:@"Play" forState:UIControlStateNormal];
-    //self.nextScreenButton.backgroundColor = [UIColor colorWithRed:0.98 green:0.91 blue:0.83 alpha:1.0];
+    [self.nextScreenButton setTitle:@"Start" forState:UIControlStateNormal];
+//    [self.nextScreenButton setBackgroundColor:[UIColor colorWithRed:((float) 0xFD / 255.0)
+//                                                              green:((float) 0xE7 / 255.0)
+//                                                               blue:((float) 0x4C / 255.0)
+//                                                              alpha:1.0]
+//                                     forState:UIControlStateHighlighted];
 }
 
 - (IBAction)changeScreen:(id)sender {
