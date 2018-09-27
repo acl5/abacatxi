@@ -12,7 +12,9 @@
 @interface ResultViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *winnerIV;
+
 @property (weak, nonatomic) IBOutlet UILabel *winnerLabel;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *selectedSugestionsCV;
 
 @property (nonatomic) Game* game;
