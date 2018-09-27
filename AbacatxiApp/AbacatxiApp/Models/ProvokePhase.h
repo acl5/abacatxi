@@ -15,8 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property int currentTurn;
 
+@property id timerTarget;
+@property NSTimer* team1Timer;
+@property NSInteger team1RemainingTime;
+@property NSTimer* team2Timer;
+@property NSInteger team2RemainingTime;
+
 @property NSMutableArray* team1Provocations;
 @property NSMutableArray* team2Provocations;
+
+- (void)startPhaseWithTarget:(id) target;
 
 - (void)addProvocation:(Provocation*)provocation;
 - (void)passTurn;
