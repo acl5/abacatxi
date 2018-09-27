@@ -430,7 +430,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_team 2" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-7P-Wdg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_ team 2" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-7P-Wdg">
                                 <rect key="frame" x="110" y="112" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
