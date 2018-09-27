@@ -44,8 +44,6 @@
     [self.game.suggestPhase addSuggestion: @"A6"];
     [self.game.suggestPhase addSuggestion: @"B6"];
     
-    NSLog(@"%@", self.game.suggestPhase.team1Suggestions[0]);
-    
     // Set Problem description label
     self.descriptionLabel.text = self.game.problem;
     
@@ -78,7 +76,6 @@
 */
 
 - (void) loadOptions {
-    NSLog(@"Here");
     static int turn = 0;
     
     NSUInteger suggestionRounds = self.game.suggestPhase.team1Suggestions.count;
@@ -113,7 +110,6 @@
     
     if (turn - suggestionRounds - 1 == provocationRounds) {
         // Perform segue into result screen
-        NSLog(@"%lu v %lu", turn + suggestionRounds, provocationRounds);
         [self performSegueWithIdentifier:@"selectionEndedSegue" sender:self];
     }
 }
