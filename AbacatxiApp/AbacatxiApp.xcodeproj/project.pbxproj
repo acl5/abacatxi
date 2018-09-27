@@ -27,6 +27,8 @@
 		7AC215B0215BD5AC005203E4 /* ProvokePhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215AF215BD5AC005203E4 /* ProvokePhaseViewController.m */; };
 		7AC215B3215C2982005203E4 /* SelectPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215B2215C2982005203E4 /* SelectPhase.m */; };
 		7AC215B6215C2A7F005203E4 /* SelectedSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215B5215C2A7F005203E4 /* SelectedSuggestion.m */; };
+		7AC215BB215D1213005203E4 /* SuggestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215B9215D1213005203E4 /* SuggestionCollectionViewCell.m */; };
+		7AC215BC215D1213005203E4 /* SuggestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC215BA215D1213005203E4 /* SuggestionCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,9 @@
 		7AC215B2215C2982005203E4 /* SelectPhase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectPhase.m; sourceTree = "<group>"; };
 		7AC215B4215C2A7F005203E4 /* SelectedSuggestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectedSuggestion.h; sourceTree = "<group>"; };
 		7AC215B5215C2A7F005203E4 /* SelectedSuggestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectedSuggestion.m; sourceTree = "<group>"; };
+		7AC215B8215D1213005203E4 /* SuggestionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionCollectionViewCell.h; sourceTree = "<group>"; };
+		7AC215B9215D1213005203E4 /* SuggestionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionCollectionViewCell.m; sourceTree = "<group>"; };
+		7AC215BA215D1213005203E4 /* SuggestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,7 @@
 		7AC21555215A5BF1005203E4 /* AbacatxiApp */ = {
 			isa = PBXGroup;
 			children = (
+				7AC215B7215D11F8005203E4 /* Views */,
 				7AC215A8215BC2B4005203E4 /* Enums */,
 				7AC21598215BB000005203E4 /* Models */,
 				7AC21597215BAFEF005203E4 /* ViewControllers */,
@@ -218,6 +224,16 @@
 				7AC215A9215BC329005203E4 /* ProvocationType.h */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		7AC215B7215D11F8005203E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AC215B8215D1213005203E4 /* SuggestionCollectionViewCell.h */,
+				7AC215B9215D1213005203E4 /* SuggestionCollectionViewCell.m */,
+				7AC215BA215D1213005203E4 /* SuggestionCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC215BC215D1213005203E4 /* SuggestionCollectionViewCell.xib in Resources */,
 				7AC21560215A5BF2005203E4 /* Assets.xcassets in Resources */,
 				7AC2155E215A5BF1005203E4 /* Main.storyboard in Resources */,
 			);
@@ -352,6 +369,7 @@
 				7AC215B6215C2A7F005203E4 /* SelectedSuggestion.m in Sources */,
 				7AC215AD215BD59E005203E4 /* SuggestPhaseViewController.m in Sources */,
 				7AC2158D215BAB64005203E4 /* ProblemViewController.m in Sources */,
+				7AC215BB215D1213005203E4 /* SuggestionCollectionViewCell.m in Sources */,
 				7AC21593215BAB79005203E4 /* SelectionViewController.m in Sources */,
 				7AC215A1215BB8DC005203E4 /* SuggestPhase.m in Sources */,
 				7AC2155B215A5BF1005203E4 /* ViewController.m in Sources */,
