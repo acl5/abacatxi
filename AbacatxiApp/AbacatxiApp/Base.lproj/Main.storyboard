@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5J-of-c0b">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -621,7 +621,7 @@ proposing solutions</string>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <segue destination="HtK-aN-CUY" kind="show" id="M7h-Wu-63z"/>
+                                    <segue destination="T5J-of-c0b" kind="show" id="Oh2-rS-zwM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -640,7 +640,9 @@ proposing solutions</string>
         <image name="icon_client" width="145" height="182"/>
         <image name="icon_iphone_not_conected" width="310" height="401"/>
         <image name="icon_team 1" width="167" height="167"/>
+        <image name="icon_team 2" width="159" height="167"/>
         <image name="mainlogo" width="349" height="413"/>
+        <image name="monitor_team 1" width="349" height="413"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="e0W-xM-DiW"/>

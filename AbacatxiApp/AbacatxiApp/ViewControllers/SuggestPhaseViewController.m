@@ -8,6 +8,7 @@
 
 #import "SuggestPhaseViewController.h"
 #import "SuggestionCollectionViewCell.h"
+#import "MPCHandler.h"
 #import "Game.h"
 
 @interface SuggestPhaseViewController ()
@@ -56,6 +57,7 @@
     
     // Start Phase
     [self.game.suggestPhase startPhaseWithTarget:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleReceivedDataNotification:) name:@"Abacatxi_DidReceiveDataNotification" object:nil];
 }
 
 /*
@@ -74,10 +76,6 @@
     NSInteger minutes = remainingTime / 60;
     NSInteger seconds = remainingTime - (60*minutes);
     self.team1TimerLabel.text = [NSString stringWithFormat: @"%02lu:%02lu", minutes, seconds];
-    
-    if (remainingTime % 10 == 0) {
-        [self getSuggestion:@"Can I have the... uuuuuuhhhmmmm..."];
-    }
     
     if (remainingTime == 0) {
         [sender invalidate];
@@ -101,10 +99,6 @@
     NSInteger seconds = remainingTime - (60*minutes);
     self.team2TimerLabel.text = [NSString stringWithFormat: @"%02lu:%02lu", minutes, seconds];
     
-    if (remainingTime % 10 == 0) {
-        [self getSuggestion:@"Can I have the... uuuuuuhhhmmmm..."];
-    }
-    
     if (remainingTime == 0) {
         [sender invalidate];
         self.endOfPhaseView.hidden = false;
@@ -120,7 +114,17 @@
                                                       repeats:YES];
 }
 
+- (void)handleReceivedDataNotification:(NSNotification*) notification {
+    NSDictionary *userInfoDict = [notification userInfo];
+    NSData *receivedData = [userInfoDict objectForKey:@"data"];
+    NSString *stringReceived = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    MCPeerID *senderPeerID = [userInfoDict objectForKey:@"peerID"];
+    NSString *senderName = senderPeerID.displayName;
+    [self getSuggestion:stringReceived];
+}
+
 - (void)getSuggestion:(NSString*) suggestion {
+    NSLog(@"Aqui");
     [self.game.suggestPhase addSuggestion:suggestion];
     if (self.game.suggestPhase.currentTurn % 2 == 0) {
         self.heartMonitor.image = [UIImage imageNamed:@"monitor_team 1"];
