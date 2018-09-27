@@ -27,6 +27,9 @@
     
     // Get game data
     self.game = [Game sharedManager];
+    
+    // Load the winner
+    [self loadWinner];
 }
 
 /*
