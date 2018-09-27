@@ -7,7 +7,7 @@
 //
 
 #import "SelectionViewController.h"
-#import "../Models/Game.h"
+#import "Game.h"
 
 @interface SelectionViewController ()
 

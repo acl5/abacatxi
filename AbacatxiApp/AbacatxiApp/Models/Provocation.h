@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../Enums/ProvocationType.h"
+#import "ProvocationType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
