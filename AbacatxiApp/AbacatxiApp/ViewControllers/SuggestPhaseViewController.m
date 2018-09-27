@@ -75,10 +75,6 @@
     NSInteger seconds = remainingTime - (60*minutes);
     self.team1TimerLabel.text = [NSString stringWithFormat: @"%02lu:%02lu", minutes, seconds];
     
-    if (remainingTime % 10 == 0) {
-        [self getSuggestion:@"Can I have the... uuuuuuhhhmmmm..."];
-    }
-    
     if (remainingTime == 0) {
         [sender invalidate];
         self.endOfPhaseView.hidden = false;
@@ -100,10 +96,6 @@
     NSInteger minutes = remainingTime / 60;
     NSInteger seconds = remainingTime - (60*minutes);
     self.team2TimerLabel.text = [NSString stringWithFormat: @"%02lu:%02lu", minutes, seconds];
-    
-    if (remainingTime % 10 == 0) {
-        [self getSuggestion:@"Can I have the... uuuuuuhhhmmmm..."];
-    }
     
     if (remainingTime == 0) {
         [sender invalidate];

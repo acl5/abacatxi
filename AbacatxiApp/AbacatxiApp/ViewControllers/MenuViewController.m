@@ -22,6 +22,7 @@
     self.menuLabel.text = appName;
     self.menuLabel.textColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
     [self.nextScreenButton setTitle:@"Start" forState:UIControlStateNormal];
+    // self.nextScreenButton.imageView.backgroundColor = [UIColor colorWithRed:((float) 0xFD / 255.0) green:((float) 0xE7 / 255.0) blue:((float) 0x4C / 255.0) alpha:1.0];
 //    [self.nextScreenButton setBackgroundColor:[UIColor colorWithRed:((float) 0xFD / 255.0)
 //                                                              green:((float) 0xE7 / 255.0)
 //                                                               blue:((float) 0x4C / 255.0)
