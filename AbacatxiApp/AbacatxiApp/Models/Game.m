@@ -34,4 +34,12 @@
     }
 }
 
+- (void)clearGame {
+    self.problem = @"";
+    
+    self.suggestPhase = [[SuggestPhase alloc] init];
+    self.provokePhase = [[ProvokePhase alloc] init];
+    self.selectPhase = [[SelectPhase alloc] init];
+}
+
 @end

@@ -52,6 +52,7 @@
 
 - (void)startGame {
     Game *game = [Game sharedManager];
+    [game clearGame]; // Clear the game, in case it's comming from replay
     game.problem = [[NSString alloc] initWithFormat: @"%@", self.problemTextField.text];
 }
 
