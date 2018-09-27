@@ -484,7 +484,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <segue destination="T5J-of-c0b" kind="show" id="e9j-lH-9tj"/>
+                                    <segue destination="T5J-of-c0b" kind="show" id="dEP-M9-SWr"/>
                                 </connections>
                             </button>
                         </subviews>
