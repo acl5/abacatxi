@@ -111,8 +111,10 @@
     
     turn++;
     
-    if (turn + suggestionRounds == provocationRounds) {
+    if (turn - suggestionRounds - 1 == provocationRounds) {
         // Perform segue into result screen
+        NSLog(@"%lu v %lu", turn + suggestionRounds, provocationRounds);
+        [self performSegueWithIdentifier:@"selectionEndedSegue" sender:self];
     }
 }
 

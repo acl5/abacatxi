@@ -358,6 +358,15 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Both"/>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gax-da-yFf">
+                                <rect key="frame" x="1510" y="934" width="353" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="hiddenContinue"/>
+                                <connections>
+                                    <segue destination="n49-wg-5Nz" kind="show" identifier="selectionEndedSegue" id="umX-dm-mFR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KVb-oc-LbA"/>
                     </view>
@@ -475,7 +484,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <segue destination="T5J-of-c0b" kind="show" id="ZLJ-e8-rfT"/>
+                                    <segue destination="T5J-of-c0b" kind="show" id="e9j-lH-9tj"/>
                                 </connections>
                             </button>
                         </subviews>
