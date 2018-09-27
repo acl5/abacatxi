@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SuggestPhase.h"
 #import "ProvokePhase.h"
+#import "SelectPhase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) SuggestPhase* suggestPhase;
 @property (nonatomic, strong) ProvokePhase* provokePhase;
+@property (nonatomic) SelectPhase* selectPhase;
 
 + (instancetype)sharedManager;
 

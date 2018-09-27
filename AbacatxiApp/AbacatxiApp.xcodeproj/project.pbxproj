@@ -25,6 +25,8 @@
 		7AC215A7215BBC95005203E4 /* Provocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215A6215BBC95005203E4 /* Provocation.m */; };
 		7AC215AD215BD59E005203E4 /* SuggestPhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215AC215BD59E005203E4 /* SuggestPhaseViewController.m */; };
 		7AC215B0215BD5AC005203E4 /* ProvokePhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215AF215BD5AC005203E4 /* ProvokePhaseViewController.m */; };
+		7AC215B3215C2982005203E4 /* SelectPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215B2215C2982005203E4 /* SelectPhase.m */; };
+		7AC215B6215C2A7F005203E4 /* SelectedSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC215B5215C2A7F005203E4 /* SelectedSuggestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		7AC215AC215BD59E005203E4 /* SuggestPhaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestPhaseViewController.m; sourceTree = "<group>"; };
 		7AC215AE215BD5AC005203E4 /* ProvokePhaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvokePhaseViewController.h; sourceTree = "<group>"; };
 		7AC215AF215BD5AC005203E4 /* ProvokePhaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvokePhaseViewController.m; sourceTree = "<group>"; };
+		7AC215B1215C2982005203E4 /* SelectPhase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectPhase.h; sourceTree = "<group>"; };
+		7AC215B2215C2982005203E4 /* SelectPhase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectPhase.m; sourceTree = "<group>"; };
+		7AC215B4215C2A7F005203E4 /* SelectedSuggestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectedSuggestion.h; sourceTree = "<group>"; };
+		7AC215B5215C2A7F005203E4 /* SelectedSuggestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectedSuggestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +202,12 @@
 				7AC215A0215BB8DC005203E4 /* SuggestPhase.m */,
 				7AC215A2215BB900005203E4 /* ProvokePhase.h */,
 				7AC215A3215BB900005203E4 /* ProvokePhase.m */,
+				7AC215B1215C2982005203E4 /* SelectPhase.h */,
+				7AC215B2215C2982005203E4 /* SelectPhase.m */,
 				7AC215A5215BBC95005203E4 /* Provocation.h */,
 				7AC215A6215BBC95005203E4 /* Provocation.m */,
+				7AC215B4215C2A7F005203E4 /* SelectedSuggestion.h */,
+				7AC215B5215C2A7F005203E4 /* SelectedSuggestion.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC215B6215C2A7F005203E4 /* SelectedSuggestion.m in Sources */,
 				7AC215AD215BD59E005203E4 /* SuggestPhaseViewController.m in Sources */,
 				7AC2158D215BAB64005203E4 /* ProblemViewController.m in Sources */,
 				7AC21593215BAB79005203E4 /* SelectionViewController.m in Sources */,
@@ -350,6 +361,7 @@
 				7AC215A4215BB900005203E4 /* ProvokePhase.m in Sources */,
 				7AC215A7215BBC95005203E4 /* Provocation.m in Sources */,
 				7AC21558215A5BF1005203E4 /* AppDelegate.m in Sources */,
+				7AC215B3215C2982005203E4 /* SelectPhase.m in Sources */,
 				7AC215B0215BD5AC005203E4 /* ProvokePhaseViewController.m in Sources */,
 				7AC21587215BAB3D005203E4 /* MenuViewController.m in Sources */,
 				7AC21596215BAB82005203E4 /* ResultViewController.m in Sources */,

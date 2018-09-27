@@ -24,17 +24,14 @@
     if (self = [super init]) {
         self.problem = @"";
         
-        self.suggestPhase = [SuggestPhase init];
-        self.provokePhase = [ProvokePhase init];
+        self.suggestPhase = [[SuggestPhase alloc] init];
+        self.provokePhase = [[ProvokePhase alloc] init];
+        self.selectPhase = [[SelectPhase alloc] init];
         
         return self;
     } else {
         return nil;
     }
-}
-
-- (void)setProblem:(NSString *)problem {
-    self.problem = problem;
 }
 
 @end
