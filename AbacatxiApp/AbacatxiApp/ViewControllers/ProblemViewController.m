@@ -8,8 +8,10 @@
 
 #import "ProblemViewController.h"
 #import "../Models/Game.h"
+#import "AppDelegate.h"
 
 @interface ProblemViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *problemTextField;
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
 

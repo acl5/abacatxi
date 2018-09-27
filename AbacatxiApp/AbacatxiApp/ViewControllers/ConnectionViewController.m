@@ -7,8 +7,12 @@
 //
 
 #import "ConnectionViewController.h"
+#import "AppDelegate.h"
+#import "DataController.h"
 
 @interface ConnectionViewController ()
+
+@property (strong, nonatomic) AppDelegate *appDelegate;
 
 @end
 
@@ -17,6 +21,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.nextScreenButton setEnabled:FALSE];
+    [DataController setupConnection:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(peerChangedStateWithNotification:) name:@"Abacatxi_DidChangeStateNotification" object:nil];
+}
+
+- (IBAction)connectionToProblem:(id)sender {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"connectionToProblem" sender:self];
+    });
+}
+
+- (void)peerChangedStateWithNotification:(NSNotification *)notification {
+    int state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    if (state != MCSessionStateConnecting) {
+        if ([DataController countConnections] == 1) {
+            [self.nextScreenButton setEnabled:YES];
+            [self.nextScreenButton setSelected:YES];
+            self.connectionStatusIndication.image = [UIImage imageNamed:@"icon_iphone_connected"];
+        } else {
+            [self.nextScreenButton setEnabled:FALSE];
+            [self.nextScreenButton setSelected:FALSE];
+            self.connectionStatusIndication.image = [UIImage imageNamed:@"icon_iphone_not_conected"];
+        }
+    }
 }
 
 /*
