@@ -8,6 +8,8 @@
 
 #import "SuggestPhase.h"
 
+#define TEAM_TIME 3*60
+
 @implementation SuggestPhase
 
 - (id)init {
@@ -17,8 +19,8 @@
         self.team1Suggestions = [[NSMutableArray alloc] init];
         self.team2Suggestions = [[NSMutableArray alloc] init];
         
-        self.team1RemainingTime = 10;
-        self.team2RemainingTime = 3*60;
+        self.team1RemainingTime = TEAM_TIME;
+        self.team2RemainingTime = TEAM_TIME;
         
         self.team1HeartRate = 100;
         self.team2HeartRate = 100;

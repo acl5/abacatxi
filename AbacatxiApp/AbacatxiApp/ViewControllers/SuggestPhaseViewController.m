@@ -44,6 +44,7 @@
     // View Setup
     self.descriptionLabel.text = self.game.problem;
     self.team1TimerLabel.text = @"03:00"; self.team2TimerLabel.text = @"03:00";
+    self.sugestionsCollectionView.dataSource = self;
     self.team1CounterLabel.textColor = [UIColor colorWithRed:((float)(0xF9 / 255.0))
                                                        green:((float)(0xE5 / 255.0))
                                                         blue:((float)(0x65 / 255.0))
@@ -74,6 +75,10 @@
     NSInteger seconds = remainingTime - (60*minutes);
     self.team1TimerLabel.text = [NSString stringWithFormat: @"%02lu:%02lu", minutes, seconds];
     
+    if (remainingTime % 10 == 0) {
+        [self getSuggestion:@"Can I have the... uuuuuuhhhmmmm..."];
+    }
+    
     if (remainingTime == 0) {
         [sender invalidate];
         self.endOfPhaseView.hidden = false;
@@ -96,6 +101,10 @@
     NSInteger seconds = remainingTime - (60*minutes);
     self.team2TimerLabel.text = [NSString stringWithFormat: @"%02lu:%02lu", minutes, seconds];
     
+    if (remainingTime % 10 == 0) {
+        [self getSuggestion:@"Can I have the... uuuuuuhhhmmmm..."];
+    }
+    
     if (remainingTime == 0) {
         [sender invalidate];
         self.endOfPhaseView.hidden = false;
@@ -111,6 +120,21 @@
                                                       repeats:YES];
 }
 
+- (void)getSuggestion:(NSString*) suggestion {
+    [self.game.suggestPhase addSuggestion:suggestion];
+    if (self.game.suggestPhase.currentTurn % 2 == 0) {
+        self.heartMonitor.image = [UIImage imageNamed:@"monitor_team 1"];
+    } else {
+        self.heartMonitor.image = [UIImage imageNamed:@"monitor_team 2"];
+    }
+    [self.sugestionsCollectionView reloadData];
+    NSIndexPath* lastCellIndexPath = [NSIndexPath indexPathForItem:self.game.suggestPhase.team1Suggestions.count + self.game.suggestPhase.team2Suggestions.count - 1 inSection:0];
+    [self.sugestionsCollectionView scrollToItemAtIndexPath:lastCellIndexPath
+                                          atScrollPosition: UICollectionViewScrollPositionRight
+                                                  animated:YES];
+    [[self.sugestionsCollectionView cellForItemAtIndexPath:lastCellIndexPath] setNeedsFocusUpdate];
+}
+
 - (void)heartBeat {
     // Play Sound
     // Play animation
@@ -121,15 +145,13 @@
     
     SuggestionCollectionViewCell* cell = (SuggestionCollectionViewCell*) [collectionView dequeueReusableCellWithReuseIdentifier:@"suggestionCell" forIndexPath:indexPath];
     
-    SelectedSuggestion* selectedSuggestion = self.game.selectPhase.selectedSuggestions[indexPath.row];
-    
-    cell.suggestionLabel.text = selectedSuggestion.suggestion;
-    
-    if (selectedSuggestion.team == 1) {
-        // Suggestion made by team 1
+    if (indexPath.row % 2 == 0) {
+        cell.suggestionLabel.text = self.game.suggestPhase.team1Suggestions[indexPath.row/2];
+
         cell.teamBoxImageView.image = [UIImage imageNamed:@"textbox_team 1"];
     } else {
-        // Suggestion made by team 2
+        cell.suggestionLabel.text = self.game.suggestPhase.team2Suggestions[indexPath.row/2];
+        
         cell.teamBoxImageView.image = [UIImage imageNamed:@"textbox_team 2"];
     }
     
@@ -137,7 +159,7 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.game.selectPhase.selectedSuggestions.count;
+    return self.game.suggestPhase.team1Suggestions.count + self.game.suggestPhase.team2Suggestions.count;
 }
 
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
@@ -153,7 +175,7 @@
 }
 
 - (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
-    return CGSizeMake(600, 300);
+    return CGSizeMake(540, 270);
 }
 
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
