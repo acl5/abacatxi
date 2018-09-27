@@ -8,6 +8,7 @@
 
 #import "SuggestPhaseViewController.h"
 #import "SuggestionCollectionViewCell.h"
+#import "MPCHandler.h"
 #import "Game.h"
 
 @interface SuggestPhaseViewController ()
@@ -56,6 +57,7 @@
     
     // Start Phase
     [self.game.suggestPhase startPhaseWithTarget:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleReceivedDataNotification:) name:@"Abacatxi_DidReceiveDataNotification" object:nil];
 }
 
 /*
@@ -112,7 +114,17 @@
                                                       repeats:YES];
 }
 
+- (void)handleReceivedDataNotification:(NSNotification*) notification {
+    NSDictionary *userInfoDict = [notification userInfo];
+    NSData *receivedData = [userInfoDict objectForKey:@"data"];
+    NSString *stringReceived = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    MCPeerID *senderPeerID = [userInfoDict objectForKey:@"peerID"];
+    NSString *senderName = senderPeerID.displayName;
+    [self getSuggestion:stringReceived];
+}
+
 - (void)getSuggestion:(NSString*) suggestion {
+    NSLog(@"Aqui");
     [self.game.suggestPhase addSuggestion:suggestion];
     self.team1CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.suggestPhase.team1Suggestions.count];
     self.team2CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.suggestPhase.team2Suggestions.count];
