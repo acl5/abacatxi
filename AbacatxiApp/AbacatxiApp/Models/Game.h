@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedManager;
 
-- (void)setProblem:(NSString*)problem;
+- (void)clearGame;
 
 @end
 
