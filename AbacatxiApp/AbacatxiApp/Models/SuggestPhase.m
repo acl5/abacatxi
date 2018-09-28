@@ -8,7 +8,7 @@
 
 #import "SuggestPhase.h"
 
-#define TEAM_TIME 10
+#define TEAM_TIME 30
 
 @implementation SuggestPhase
 

@@ -31,6 +31,7 @@
     
     // Get the game state
     self.game = [Game sharedManager];
+<<<<<<< HEAD
     self.game.problem = @"Problem description";
     [self.game.suggestPhase addSuggestion: @"A1"];
     [self.game.suggestPhase addSuggestion: @"B1"];
@@ -44,6 +45,8 @@
     [self.game.suggestPhase addSuggestion: @"B5"];
     [self.game.suggestPhase addSuggestion: @"A6"];
     [self.game.suggestPhase addSuggestion: @"B6"];
+=======
+>>>>>>> provoke_phase
     
     // Set Problem description label
     self.descriptionLabel.text = self.game.problem;
@@ -97,11 +100,13 @@
         NSMutableArray* team1Provocations = self.game.provokePhase.team1Provocations;
         NSMutableArray* team2Provocations = self.game.provokePhase.team2Provocations;
         
-        [self.option1Button setTitle:team1Provocations[turn] forState:UIControlStateNormal];
+        Provocation* team1Provocation = (Provocation*) team1Provocations[turn - suggestionRounds];
+        Provocation* team2Provocation = (Provocation*) team2Provocations[turn - suggestionRounds];
+        [self.option1Button setTitle:team1Provocation.provocation forState:UIControlStateNormal];
         if (team2Provocations.count < team1Provocations.count) {
             [team2Provocations addObject: [[Provocation alloc] init]];
         }
-        [self.option2Button setTitle:team2Provocations[turn] forState:UIControlStateNormal];
+        [self.option2Button setTitle:team2Provocation.provocation forState:UIControlStateNormal];
     }
     
     self.team1CounterLabel.text = [NSString stringWithFormat: @"%d", self.game.selectPhase.team1Score];
