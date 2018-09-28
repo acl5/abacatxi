@@ -31,6 +31,7 @@
     
     // Get the game state
     self.game = [Game sharedManager];
+    self.game.problem = @"Problem description";
     [self.game.suggestPhase addSuggestion: @"A1"];
     [self.game.suggestPhase addSuggestion: @"B1"];
     [self.game.suggestPhase addSuggestion: @"A2"];
