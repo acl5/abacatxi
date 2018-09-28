@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		516373B1215E601E00AD70E6 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516373B0215E601E00AD70E6 /* InstructionsViewController.m */; };
 		51BF1424215D3DCF0001A72A /* MPCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF1423215D3DCF0001A72A /* MPCHandler.m */; };
 		51BF1428215D567A0001A72A /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF1427215D567A0001A72A /* DataController.m */; };
 		7AC21558215A5BF1005203E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21557215A5BF1005203E4 /* AppDelegate.m */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		516373AF215E601E00AD70E6 /* InstructionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
+		516373B0215E601E00AD70E6 /* InstructionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
 		51BF1422215D3D2F0001A72A /* MPCHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPCHandler.h; sourceTree = "<group>"; };
 		51BF1423215D3DCF0001A72A /* MPCHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPCHandler.m; sourceTree = "<group>"; };
 		51BF1426215D567A0001A72A /* DataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				7AC215AB215BD59E005203E4 /* SuggestPhaseViewController.h */,
 				7AC215AC215BD59E005203E4 /* SuggestPhaseViewController.m */,
 				7AC215AE215BD5AC005203E4 /* ProvokePhaseViewController.h */,
+				516373AF215E601E00AD70E6 /* InstructionsViewController.h */,
+				516373B0215E601E00AD70E6 /* InstructionsViewController.m */,
 				7AC215AF215BD5AC005203E4 /* ProvokePhaseViewController.m */,
 				7AC21591215BAB79005203E4 /* SelectionViewController.h */,
 				7AC21592215BAB79005203E4 /* SelectionViewController.m */,
@@ -321,6 +326,11 @@
 				TargetAttributes = {
 					7AC21552215A5BF1005203E4 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.appletvos = {
+								enabled = 0;
+							};
+						};
 					};
 					7AC21567215A5BF2005203E4 = {
 						CreatedOnToolsVersion = 10.0;
@@ -387,6 +397,7 @@
 				7AC215B6215C2A7F005203E4 /* SelectedSuggestion.m in Sources */,
 				7AC215AD215BD59E005203E4 /* SuggestPhaseViewController.m in Sources */,
 				7AC2158D215BAB64005203E4 /* ProblemViewController.m in Sources */,
+				516373B1215E601E00AD70E6 /* InstructionsViewController.m in Sources */,
 				51BF1424215D3DCF0001A72A /* MPCHandler.m in Sources */,
 				7AC215BB215D1213005203E4 /* SuggestionCollectionViewCell.m in Sources */,
 				7AC21593215BAB79005203E4 /* SelectionViewController.m in Sources */,
