@@ -31,22 +31,6 @@
     
     // Get the game state
     self.game = [Game sharedManager];
-<<<<<<< HEAD
-    self.game.problem = @"Problem description";
-    [self.game.suggestPhase addSuggestion: @"A1"];
-    [self.game.suggestPhase addSuggestion: @"B1"];
-    [self.game.suggestPhase addSuggestion: @"A2"];
-    [self.game.suggestPhase addSuggestion: @"B2"];
-    [self.game.suggestPhase addSuggestion: @"A3"];
-    [self.game.suggestPhase addSuggestion: @"B3"];
-    [self.game.suggestPhase addSuggestion: @"A4"];
-    [self.game.suggestPhase addSuggestion: @"B4"];
-    [self.game.suggestPhase addSuggestion: @"A5"];
-    [self.game.suggestPhase addSuggestion: @"B5"];
-    [self.game.suggestPhase addSuggestion: @"A6"];
-    [self.game.suggestPhase addSuggestion: @"B6"];
-=======
->>>>>>> provoke_phase
     
     // Set Problem description label
     self.descriptionLabel.text = self.game.problem;
@@ -91,10 +75,20 @@
         NSMutableArray* team2Suggestions = self.game.suggestPhase.team2Suggestions;
         
         [self.option1Button setTitle:team1Suggestions[turn] forState:UIControlStateNormal];
+        if ([team1Suggestions[turn]  isEqual: @""]) {
+            [self.option1Button setUserInteractionEnabled:false];
+        } else {
+            [self.option1Button setUserInteractionEnabled:true];
+        }
         if (team2Suggestions.count < team1Suggestions.count) {
             [team2Suggestions addObject:@""];
         }
         [self.option2Button setTitle:team2Suggestions[turn] forState:UIControlStateNormal];
+        if ([team2Suggestions[turn]  isEqual: @""]) {
+            [self.option2Button setUserInteractionEnabled:false];
+        } else {
+            [self.option2Button setUserInteractionEnabled:true];
+        }
     } else if (turn < suggestionRounds + provocationRounds - 1) {
         // Get provocations
         NSMutableArray* team1Provocations = self.game.provokePhase.team1Provocations;
@@ -103,10 +97,20 @@
         Provocation* team1Provocation = (Provocation*) team1Provocations[turn - suggestionRounds];
         Provocation* team2Provocation = (Provocation*) team2Provocations[turn - suggestionRounds];
         [self.option1Button setTitle:team1Provocation.provocation forState:UIControlStateNormal];
+        if ([team1Provocation.provocation  isEqual: @""]) {
+            [self.option1Button setUserInteractionEnabled:false];
+        } else {
+            [self.option1Button setUserInteractionEnabled:true];
+        }
         if (team2Provocations.count < team1Provocations.count) {
             [team2Provocations addObject: [[Provocation alloc] init]];
         }
         [self.option2Button setTitle:team2Provocation.provocation forState:UIControlStateNormal];
+        if ([team2Provocation.provocation  isEqual: @""]) {
+            [self.option1Button setUserInteractionEnabled:false];
+        } else {
+            [self.option1Button setUserInteractionEnabled:true];
+        }
     }
     
     self.team1CounterLabel.text = [NSString stringWithFormat: @"%d", self.game.selectPhase.team1Score];

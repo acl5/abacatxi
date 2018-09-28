@@ -43,12 +43,12 @@
 - (void)addProvocation:(Provocation*)provocation {
     if (self.currentTurn % 2 == 0) {
         // Team 1's turn
-        [[self team1Provocations] addObject:provocation];
+        [self.team1Provocations addObject:provocation];
         [self.team1Timer invalidate];
         self.team2Timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self.timerTarget selector:@selector(team2TimerUpdate:) userInfo:NULL repeats:YES];
     } else {
         // Team 2's turn
-        [[self team2Provocations] addObject:provocation];
+        [self.team2Provocations addObject:provocation];
         [self.team2Timer invalidate];
         self.team1Timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self.timerTarget selector:@selector(team1TimerUpdate:) userInfo:NULL repeats:YES];
     }

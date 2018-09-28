@@ -81,6 +81,7 @@
 - (void)presentProvocation {
     int index;
     NSString* suggestion;
+    
     if (self.game.provokePhase.currentTurn % 2 == 0) {
         // Team 1's turn
         self.teamBoxImageView.image = [UIImage imageNamed:@"textbox_team 2"];
@@ -88,27 +89,27 @@
         
         do {
             index = arc4random() % self.game.suggestPhase.team2Suggestions.count;
-        } while ((BOOL) self.team1ProvokedSuggestions[index] == YES);
+        } while ((BOOL) self.team2ProvokedSuggestions[index] == YES);
         
         suggestion = self.game.suggestPhase.team2Suggestions[index];
         self.team2ProvokedSuggestions[index] = YES;
-        self.provocation = [Provocation provocationFromSuggestion:suggestion];
+        self.provocation = [[Provocation alloc] initWithSuggestion:suggestion];
         
         switch (self.provocation.type) {
             case Exageration:
-                self.team1ProvocationLabel.text = @"Exagerate";
+                self.team1ProvocationLabel.text = @"EXAGERATE";
                 break;
                 
             case Revertion:
-                self.team1ProvocationLabel.text = @"Revert";
+                self.team1ProvocationLabel.text = @"REVERT";
                 break;
                 
             case Invertion:
-                self.team1ProvocationLabel.text = @"Invert";
+                self.team1ProvocationLabel.text = @"INVERT";
                 break;
             
             default:
-                self.team1ProvocationLabel.text = @"Bug";
+                self.team1ProvocationLabel.text = @"BUG";
         }
     } else {
         // Team 2's turn
@@ -117,11 +118,11 @@
         
         do {
             index = arc4random() % self.game.suggestPhase.team1Suggestions.count;
-        } while ((BOOL) self.team2ProvokedSuggestions[index] == YES);
+        } while ((BOOL) self.team1ProvokedSuggestions[index] == YES);
         
         suggestion = self.game.suggestPhase.team1Suggestions[index];
         self.team1ProvokedSuggestions[index] = YES;
-        self.provocation = [Provocation provocationFromSuggestion:suggestion];
+        self.provocation = [[Provocation alloc] initWithSuggestion:suggestion];
         
         switch (self.provocation.type) {
             case Exageration:
@@ -159,10 +160,6 @@
         [self.continueButton setNeedsFocusUpdate];
     }
     
-    if (remainingTime % 10 == 0) {
-        [self getProvocation:[NSString stringWithFormat:@"Provocation %d", provocationCount++]];
-    }
-    
     // Update heartRate
     
     self.heartTimer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.game.suggestPhase.team1HeartRate
@@ -187,10 +184,6 @@
         [self.continueButton setNeedsFocusUpdate];
     }
     
-    if (remainingTime % 10 == 0) {
-        [self getProvocation:[NSString stringWithFormat:@"Provocation %d", provocationCount++]];
-    }
-    
     // Update heartRate
     
     self.heartTimer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.game.suggestPhase.team1HeartRate
@@ -212,8 +205,10 @@
 - (void)getProvocation:(NSString*) provocation {
     self.provocation.provocation = provocation;
     [self.game.provokePhase addProvocation:self.provocation];
+    
     self.team1CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.provokePhase.team1Provocations.count];
     self.team2CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.provokePhase.team2Provocations.count];
+    
     if (self.game.provokePhase.currentTurn % 2 == 0) {
         self.timerImageView.image = [UIImage imageNamed:@"timer_team 1"];
         self.timerLabel.textColor = [UIColor colorWithRed:((float)(0xF9 / 255.0))
@@ -229,12 +224,23 @@
                                                     alpha:1.0];
         [self team2TimerUpdate:nil];
     }
+    
     [self presentProvocation];
 }
 
 - (void)heartBeat {
     // Play Sound
     // Play animation
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier
+                                  sender:(id)sender {
+    if ([identifier isEqualToString:@"provocationEndSegue"]) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:@"Abacatxi_DidReceiveDataNotification"
+                                                      object:nil];
+    }
+    return YES;
 }
 
 @end

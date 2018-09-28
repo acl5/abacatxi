@@ -84,10 +84,6 @@
         [self.continueButton setNeedsFocusUpdate];
     }
     
-    if (remainingTime % 10 == 0) {
-        [self getSuggestion:[NSString stringWithFormat:@"Suggestion %d", suggestionCount++]];
-    }
-    
     // Update heartRate
     
     self.heartTimer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.game.suggestPhase.team1HeartRate
@@ -112,10 +108,6 @@
         [self.continueButton setNeedsFocusUpdate];
     }
     
-    if (remainingTime % 10 == 0) {
-        [self getSuggestion:[NSString stringWithFormat:@"Suggestion %d", suggestionCount++]];
-    }
-    
     // Update heartRate
     
     self.heartTimer = [NSTimer scheduledTimerWithTimeInterval:60.0/self.game.suggestPhase.team1HeartRate
@@ -135,7 +127,7 @@
 }
 
 - (void)getSuggestion:(NSString*) suggestion {
-    NSLog(@"Aqui");
+    NSLog(@"ESTOU ADICIONANDO UMA SUGESTÃO!!");
     [self.game.suggestPhase addSuggestion:suggestion];
     self.team1CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.suggestPhase.team1Suggestions.count];
     self.team2CounterLabel.text = [NSString stringWithFormat:@"%lu", self.game.suggestPhase.team2Suggestions.count];
@@ -231,6 +223,16 @@
 
 - (void)updateFocusIfNeeded {
     // No idea what should go here
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier
+                                  sender:(id)sender {
+    if ([identifier isEqualToString:@"suggestionEndSegue"]) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:@"Abacatxi_DidReceiveDataNotification"
+                                                      object:nil];
+    }
+    return YES;
 }
 
 @end
