@@ -12,7 +12,7 @@
 @implementation Provocation
 
 + (instancetype)provocationFromSuggestion:(NSString*)suggestion {
-    Provocation* provocation = [self init];
+    Provocation* provocation = [[self alloc] init];
     
     provocation.suggestion = suggestion;
     

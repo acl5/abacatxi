@@ -8,6 +8,8 @@
 
 #import "ProvokePhase.h"
 
+#define TEAM_TIME 20
+
 @implementation ProvokePhase
 
 - (id)init {
@@ -17,8 +19,8 @@
         self.team1Provocations = [[NSMutableArray alloc] init];
         self.team2Provocations = [[NSMutableArray alloc] init];
     
-        self.team1RemainingTime = 1.5*60;
-        self.team2RemainingTime = 1.5*60;
+        self.team1RemainingTime = TEAM_TIME;
+        self.team2RemainingTime = TEAM_TIME;
         
         return self;
     } else {
