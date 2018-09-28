@@ -69,6 +69,8 @@
     NSUInteger suggestionRounds = self.game.suggestPhase.team1Suggestions.count;
     NSUInteger provocationRounds = self.game.provokePhase.team1Provocations.count;
     
+    self.bothButton.hidden = false;
+    
     if (turn < suggestionRounds) {
         // Get suggestions
         NSMutableArray* team1Suggestions = self.game.suggestPhase.team1Suggestions;
@@ -77,6 +79,7 @@
         [self.option1Button setTitle:team1Suggestions[turn] forState:UIControlStateNormal];
         if ([team1Suggestions[turn]  isEqual: @""]) {
             [self.option1Button setUserInteractionEnabled:false];
+            self.bothButton.hidden = true;
         } else {
             [self.option1Button setUserInteractionEnabled:true];
         }
@@ -86,10 +89,11 @@
         [self.option2Button setTitle:team2Suggestions[turn] forState:UIControlStateNormal];
         if ([team2Suggestions[turn]  isEqual: @""]) {
             [self.option2Button setUserInteractionEnabled:false];
+            self.bothButton.hidden = true;
         } else {
             [self.option2Button setUserInteractionEnabled:true];
         }
-    } else if (turn < suggestionRounds + provocationRounds - 1) {
+    } else if (turn - suggestionRounds < provocationRounds) {
         // Get provocations
         NSMutableArray* team1Provocations = self.game.provokePhase.team1Provocations;
         NSMutableArray* team2Provocations = self.game.provokePhase.team2Provocations;
@@ -99,6 +103,7 @@
         [self.option1Button setTitle:team1Provocation.provocation forState:UIControlStateNormal];
         if ([team1Provocation.provocation  isEqual: @""]) {
             [self.option1Button setUserInteractionEnabled:false];
+            self.bothButton.hidden = true;
         } else {
             [self.option1Button setUserInteractionEnabled:true];
         }
@@ -108,6 +113,7 @@
         [self.option2Button setTitle:team2Provocation.provocation forState:UIControlStateNormal];
         if ([team2Provocation.provocation  isEqual: @""]) {
             [self.option1Button setUserInteractionEnabled:false];
+            self.bothButton.hidden = true;
         } else {
             [self.option1Button setUserInteractionEnabled:true];
         }
