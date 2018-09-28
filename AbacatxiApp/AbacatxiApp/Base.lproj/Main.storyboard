@@ -605,10 +605,10 @@ proposing solutions</string>
             </objects>
             <point key="canvasLocation" x="16926" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions View Controller-->
         <scene sceneID="66o-om-Sx4">
             <objects>
-                <viewController id="ess-Go-Gyx" sceneMemberID="viewController">
+                <viewController id="ess-Go-Gyx" customClass="InstructionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jAO-ot-7lk"/>
                         <viewControllerLayoutGuide type="bottom" id="E7Y-es-AJR"/>
@@ -617,6 +617,31 @@ proposing solutions</string>
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2_client" translatesAutoresizingMaskIntoConstraints="NO" id="M4R-hL-8k0">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pass the iPhone to the other team" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s3-ba-8bp">
+                                <rect key="frame" x="773" y="575" width="652" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="42"/>
+                                <color key="textColor" red="0.85490196080000003" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take the iPhone and suggest a solution to the Client's problem" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jG-rB-GTY">
+                                <rect key="frame" x="547" y="408" width="600" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="42"/>
+                                <color key="textColor" red="0.85490196080000003" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team 1 Starts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-UA-OGa">
+                                <rect key="frame" x="547" y="189" width="667" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                <color key="textColor" red="0.85490196080000003" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6N-lI-L9I">
                                 <rect key="frame" x="707" y="758" width="507" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -626,6 +651,18 @@ proposing solutions</string>
                                     <segue destination="T5J-of-c0b" kind="show" id="Oh2-rS-zwM"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_team 1" translatesAutoresizingMaskIntoConstraints="NO" id="88k-Hs-UTM">
+                                <rect key="frame" x="310" y="189" width="175" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_team 2" translatesAutoresizingMaskIntoConstraints="NO" id="Rzs-QD-SAP">
+                                <rect key="frame" x="1449" y="599" width="127" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_interact_p1" translatesAutoresizingMaskIntoConstraints="NO" id="Sk3-n9-Vh4">
+                                <rect key="frame" x="317" y="400" width="168" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="603-ii-Syb"/>
                     </view>
@@ -639,6 +676,7 @@ proposing solutions</string>
         <image name="bg1_main" width="1921" height="1081"/>
         <image name="bg2_client" width="1921" height="1080"/>
         <image name="icon_client" width="145" height="182"/>
+        <image name="icon_interact_p1" width="148" height="188"/>
         <image name="icon_iphone_not_conected" width="310" height="401"/>
         <image name="icon_team 1" width="167" height="167"/>
         <image name="icon_team 2" width="159" height="167"/>
@@ -646,7 +684,6 @@ proposing solutions</string>
         <image name="monitor_team 1" width="349" height="413"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="umX-dm-mFR"/>
-        <segue reference="DDi-Vb-aFa"/>
+        <segue reference="e0W-xM-DiW"/>
     </inferredMetricsTieBreakers>
 </document>
