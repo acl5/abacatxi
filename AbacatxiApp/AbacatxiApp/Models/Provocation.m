@@ -11,6 +11,14 @@
 
 @implementation Provocation
 
++ (instancetype)provocationFromSuggestion:(NSString*)suggestion {
+    Provocation* provocation = [self init];
+    
+    provocation.suggestion = suggestion;
+    
+    return provocation;
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         self.type = (ProvocationType) (arc4random() % (int) ProvocationTypeMax); // Get a random provocation type

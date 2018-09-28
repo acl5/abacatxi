@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property ProvocationType type;
 @property NSString *provocation;
 
++ (instancetype)provocationFromSuggestion:(NSString*)suggestion;
+
 - (instancetype)initWithSuggestion:(NSString*)suggestion;
 
 @end

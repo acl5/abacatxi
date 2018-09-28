@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51BF1424215D3DCF0001A72A /* MPCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF1423215D3DCF0001A72A /* MPCHandler.m */; };
 		51BF1428215D567A0001A72A /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF1427215D567A0001A72A /* DataController.m */; };
+		7A947542215E5A8200F28A4D /* LCDML___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7A947541215E5A8200F28A4D /* LCDML___.TTF */; };
 		7AC21558215A5BF1005203E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC21557215A5BF1005203E4 /* AppDelegate.m */; };
 		7AC2155B215A5BF1005203E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2155A215A5BF1005203E4 /* ViewController.m */; };
 		7AC2155E215A5BF1005203E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC2155C215A5BF1005203E4 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		51BF1423215D3DCF0001A72A /* MPCHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPCHandler.m; sourceTree = "<group>"; };
 		51BF1426215D567A0001A72A /* DataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		51BF1427215D567A0001A72A /* DataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		7A947541215E5A8200F28A4D /* LCDML___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LCDML___.TTF"; sourceTree = "<group>"; };
 		7AC21553215A5BF1005203E4 /* AbacatxiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbacatxiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC21556215A5BF1005203E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7AC21557215A5BF1005203E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				7AC2155A215A5BF1005203E4 /* ViewController.m */,
 				7AC2155C215A5BF1005203E4 /* Main.storyboard */,
 				7AC2155F215A5BF2005203E4 /* Assets.xcassets */,
+				7A947541215E5A8200F28A4D /* LCDML___.TTF */,
 				7AC21561215A5BF2005203E4 /* Info.plist */,
 				7AC21562215A5BF2005203E4 /* main.m */,
 			);
@@ -357,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A947542215E5A8200F28A4D /* LCDML___.TTF in Resources */,
 				7AC215BC215D1213005203E4 /* SuggestionCollectionViewCell.xib in Resources */,
 				7AC21560215A5BF2005203E4 /* Assets.xcassets in Resources */,
 				7AC2155E215A5BF1005203E4 /* Main.storyboard in Resources */,
